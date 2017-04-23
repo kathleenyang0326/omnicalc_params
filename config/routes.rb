@@ -6,4 +6,5 @@ get("/",{:controller=>"calculations",:action=>"home_page"})
 get("flexible/payment/:a/:b/:c",{:controller=>"calculations",:action=>"flexible_payment"})
 get("flexible/random/:c/:d",{:controller=>"calculations",:action=>"flexible_random_number"})
 get("/square/new",{:controller=>"calculations",:action=>"square_form"})
+get("/square/results",{:controller=>"calculations",:action=>"square_results"})
 end
