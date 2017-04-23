@@ -25,6 +25,11 @@ def flexible_payment
   @output=@monthly_rate*@present_value/(1-(1+@monthly_rate)**(-@periods))
   render ("calculations/flexible_payment.html.erb")
 end
+def flexible_random_number
+  @starting_number=params["c"].to_f
+  @ending_number=params["d"].to_f
+  @output=rand (@starting_number...@ending_number)
+end
 def square_form
 
 end
