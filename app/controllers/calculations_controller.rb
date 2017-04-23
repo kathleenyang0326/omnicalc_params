@@ -32,7 +32,13 @@ def flexible_random_number
 end
 def square_form
 end
+def square_root_form
+end
 def square_results
+   @number=params[:user_number].to_f
+end
+def square_root_results
+   @number=params[:user_number].to_f
 end
 
 end
