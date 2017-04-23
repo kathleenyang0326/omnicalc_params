@@ -1,0 +1,34 @@
+<h1> Payment Resuls
+</h1>
+<div><label>
+  APR
+  </label>
+</div>
+<div>
+<%=number_to_percentage(@screen_display_rate,precision:4)%>
+</div>
+<div>
+<label>
+  Number of years
+</label>
+</div>
+<div>
+<%=@periods/12%>
+</div>
+<div>
+<label>
+  Principal
+</label>
+</div>
+<div>
+<%=number_to_currency(@present_value)%>
+</div>
+<div>
+<label>
+  Payment
+</label>
+</div>
+<div>
+<%=number_to_currency(@output)%>
+</div>
+<a href="/payment/new">Calculate another payment </a>

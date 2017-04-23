@@ -29,6 +29,7 @@ def flexible_random_number
   @starting_number=params["c"].to_f
   @ending_number=params["d"].to_f
   @output=rand (@starting_number...@ending_number)
+    render("calculations/flexible_random_number.html.erb")
 end
 def square_form
 end
@@ -36,9 +37,18 @@ def square_root_form
 end
 def square_results
    @number=params[:user_number].to_f
+   render("calculations/square_results.html.erb")
 end
 def square_root_results
    @number=params[:user_number].to_f
+   render("calculations/square_root_results.html.erb")
 end
-
+def payment_results
+   @monthly_rate=params[:apr].to_f/100/12
+   @periods=params[:number_of_years].to_f*12
+   @present_value=params[:principal].to_f
+   @screen_display_rate=params[:apr].to_f
+   @output=@monthly_rate*@present_value/(1-(1+@monthly_rate)**(-@periods))
+   render("calculations/payment_results.html.erb")
+end
 end
