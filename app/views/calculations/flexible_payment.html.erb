@@ -1,4 +1,2 @@
-<h1>
-  Flexible Payment of
-  <%=@the_number%> is <%=@the_number**2 %>
-</h1>
+<h1>Flexible Payment</h1>
+<h2> A <%=@screen_display_period.round(-1)%> year loan of <%=number_to_currency(@present_value,precision:0)%>, with an annual interest rate of <%=number_to_percentage(@screen_display_monthly_rate,precision:2)%>, requires a monthly payment of <%=number_to_currency(@output.round(2)) %></h2>
