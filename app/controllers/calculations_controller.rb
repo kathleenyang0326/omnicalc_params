@@ -1,9 +1,5 @@
 class CalculationsController < ApplicationController
 def home_page
-
-
-
-
 end
 
   def flexible_square
@@ -39,6 +35,10 @@ def payment_form
 end
 def random_form
 end
+def word_count_form
+end
+def descriptive_statistics_form
+end
 def square_results
    @number=params[:user_number].to_f
    render("calculations/square_results.html.erb")
@@ -60,5 +60,15 @@ def random_results
   @ending_number=params[:ending_number].to_f
   @output=rand (@starting_number...@ending_number)
     render("calculations/random_results.html.erb")
+end
+def word_count_results
+  @text= params[:text_input]
+  @special_word = params[:special_word_input]
+  @word_count= @text.split.count
+  @character_count_with_spaces = @text.length
+  @character_count_without_spaces = @text.strip.gsub(/[^a-z0-9\s]/i, "").gsub(" ","").length
+  @occurrences = @text.gsub(/[^a-z0-9\s]/i, "").downcase.split.count(@special_word.downcase)
+end
+def descriptive_statistics_results
 end
 end

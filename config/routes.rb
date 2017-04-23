@@ -13,4 +13,9 @@ get("/payment/new",{:controller=>"calculations",:action=>"payment_form"})
 get("/payment/results",{:controller=>"calculations",:action=>"payment_results"})
 get("/random/new",{:controller=>"calculations",:action=>"random_form"})
 get("/random/results",{:controller=>"calculations",:action=>"random_results"})
+get("/word_count/new",{:controller=>"calculations",:action=>"word_count_form"})
+get("/word_count/results",{:controller=>"calculations",:action=>"word_count_results"})
+get("/descriptive_statistics/new",{:controller=>"calculations",:action=>"descriptive_statistics_form"})
+get("/descriptive_statistics/results",{:controller=>"calculations",:action=>"descriptive_statistics_results"})
+
 end
