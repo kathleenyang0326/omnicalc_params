@@ -1,0 +1,26 @@
+<h1> Random Resuls
+</h1>
+<div><label>
+  Minimum
+  </label>
+</div>
+<div>
+<%=@starting_number%>
+</div>
+<div>
+<label>
+  Maximum
+</label>
+</div>
+<div>
+<%=@ending_number%>
+</div>
+<div>
+<label>
+  Random Number
+</label>
+</div>
+<div>
+<%=@output%>
+</div>
+<a href="/random/results?starting_number=<%=params[:starting_number]%>&ending_number=<%=params[:ending_number]%>">Recalculate within the same range </a>
